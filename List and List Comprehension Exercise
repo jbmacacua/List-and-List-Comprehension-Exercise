@@ -1,0 +1,138 @@
+print("\n<-----Programmed by: Jonas Brian R. Macacua----->")
+print("       <----------BSCOE 2-2---------->\n\n")
+
+print("Array: [14, 24, 1, 4, 6, 7, 14, 11, 24, 5]\n")
+print("Menu:\t"
+      "1 -> Add an element \n "
+      "       2 -> Insert an element\n"
+      "        3 -> Modify an element\n"
+      "        4 -> Delete an element\n"
+      "        5 -> Arrange in ascending order\n"
+      "        6 -> Arrange in descending order\n"
+      "        7 -> Identify the smallest element\n"
+      "        8 -> Identify the largest element\n"
+      "        9 -> Count the number of an element in the given array\n"
+      "        10 -> Add all the elements in the array\n")
+
+arr = [14, 24, 1, 4, 6, 7, 14, 11, 24, 5]
+while True:
+    try:
+        choice = int(input("What do you want to do? "))
+    except ValueError:
+        print("The option you entered was not in the menu!")
+
+        try_again = input("\nWould you like to try again? Yes or No: ")
+        if try_again == "Yes" or try_again == "yes":
+            continue
+        else:
+            print("Thank you for running the program!")
+            break
+
+    if choice == 1:
+        add = int(input("Enter the element you want to add: "))
+        arr.append(add)
+        print("This is the new array: ",(arr))
+        try_again = input("\nWould you like to try again? Yes or No: ")
+        if try_again == "Yes" or try_again == "yes":
+            continue
+        else:
+            print("Thank you for running the program!")
+            break
+
+    if choice == 2:
+        ins = int(input("Enter the element you want to insert: "))
+        place = int(input("Enter the index you want to insert the element: "))
+        arr.insert(place, ins)
+        print("This is the new array: ", (arr))
+        try_again = input("\nWould you like to try again? Yes or No: ")
+        if try_again == "Yes" or try_again == "yes":
+            continue
+        else:
+            print("Thank you for running the program!")
+            break
+
+    if choice == 3:
+        pl = int(input("Enter the index you want to modify: "))
+        mod = int(input("Enter your new element: "))
+        arr[pl] = (mod)
+        print("This is the new array: ", (arr))
+        try_again = input("\nWould you like to try again? Yes or No: ")
+        if try_again == "Yes" or try_again == "yes":
+            continue
+        else:
+            print("Thank you for running the program!")
+            break
+
+    if choice == 4:
+        mod = int(input("Enter the element you want to delete: "))
+        arr.remove(mod)
+        print("This is the new array: ", (arr))
+        try_again = input("\nWould you like to try again? Yes or No: ")
+        if try_again == "Yes" or try_again == "yes":
+            continue
+        else:
+            print("Thank you for running the program!")
+            break
+
+    if choice == 5:
+        arr.sort()
+        print("The array has been arranged in ascending order.", arr)
+        try_again = input("\nWould you like to try again? Yes or No: ")
+        if try_again == "Yes" or try_again == "yes":
+            continue
+        else:
+            print("Thank you for running the program!")
+            break
+
+    if choice == 6:
+        arr.sort()
+        arr.reverse()
+        print("The array has been arranged in descending order.", arr)
+        try_again = input("\nWould you like to try again? Yes or No: ")
+        if try_again == "Yes" or try_again == "yes":
+            continue
+        else:
+            print("Thank you for running the program!")
+            break
+
+    if choice == 7:
+        mi = min(arr)
+        print("The smallest element is: ", mi)
+        try_again = input("\nWould you like to try again? Yes or No: ")
+        if try_again == "Yes" or try_again == "yes":
+            continue
+        else:
+            print("Thank you for running the program!")
+            break
+
+    if choice == 8:
+        ma = max(arr)
+        print("The largest element is: ", ma)
+        try_again = input("\nWould you like to try again? Yes or No: ")
+        if try_again == "Yes" or try_again == "yes":
+            continue
+        else:
+            print("\nThank you for running the program :)")
+            break
+
+    if choice == 9:
+        co = int(input("Enter the element you want to count: "))
+        count = arr.count(co)
+        print("The occurence of the element you entered is: ", count)
+        try_again = input("\nWould you like to try again? Yes or No: ")
+        if try_again == "Yes" or try_again == "yes":
+            continue
+        else:
+            print("\nThank you for running the program :)")
+            break
+
+    if choice == 10:
+        total = sum(arr)
+        print("The sum of all the elements inside the array is: ", total)
+        try_again = input("\nWould you like to try again? Yes or No: ")
+        if try_again == "Yes" or try_again == "yes":
+            continue
+        else:
+            print("\nThank you for running the program :)")
+            break
+
